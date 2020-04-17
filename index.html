@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>JavaScript Task 3</title>
+</head>
+<body>
+    <script>
+        function converter(int) {
+            let conversion = [],
+                process = '';
+
+            for (let i = 1; i <= int; i++ ) {
+                if (i % 2 == 0) {
+                    process = 'yu';
+                    if (i % 3 == 0) {
+                        process += '-gi';
+                        if (i % 5 == 0) {
+                            process += '-oh';
+                        }
+                    }
+                    else  if (i % 5 == 0) {
+                        process += '-oh';
+                    }
+                }
+                else if (i % 3 == 0) {
+                    process = 'gi';
+                    if (i % 5 == 0) {
+                        process += '-oh';
+                    }
+                }
+                else if (i % 5 == 0) {
+                        process = 'oh';
+                    }
+                else {
+                    process = i;
+                }
+                
+                conversion.push(process);
+            }
+
+            console.log(conversion)
+        }
+
+        converter(100);
+        converter(30);
+    </script>
+</body>
+</html>
